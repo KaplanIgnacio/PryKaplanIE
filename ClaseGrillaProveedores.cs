@@ -13,7 +13,7 @@ namespace PryKaplanTrabajo
     public class ClaseGrillaProveedores
     {
         //Me posiciono en el archivo de los proveedores
-        public string ArchivoProveedores = "D:\\Igna\\Laboratorio de Programación 2\\PryKaplanIE\\Resources\\Proveedores\\datosProveedor.csv";
+        public string ArchivoProveedores = @"../../Resources/Proveedores/datosProveedor.csv";
 
         public void GuardarDatos(string num, string ent, string aper, string expe, string juzg, string jurisd, string direc, string liqui)
         {

@@ -34,7 +34,7 @@ namespace PryKaplanTrabajo
         {
             TreeNode nodoMadre;
 
-            DirectoryInfo info = new DirectoryInfo("D:\\Igna\\Laboratorio de Programación 2\\PryKaplanIE\\Resources\\Proveedores");
+            DirectoryInfo info = new DirectoryInfo(@"../../Resources/Proveedores");
             if (info.Exists == true) //POR DEFECTO el IF pregunta true
             {
                 nodoMadre = new TreeNode(info.Name);

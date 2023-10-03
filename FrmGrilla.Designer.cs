@@ -45,6 +45,8 @@
             // 
             // DgvProveedores
             // 
+            this.DgvProveedores.AllowUserToAddRows = false;
+            this.DgvProveedores.AllowUserToDeleteRows = false;
             this.DgvProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvProveedores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombre,
@@ -56,6 +58,8 @@
             this.Liquidador});
             this.DgvProveedores.Location = new System.Drawing.Point(28, 24);
             this.DgvProveedores.Name = "DgvProveedores";
+            this.DgvProveedores.ReadOnly = true;
+            this.DgvProveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvProveedores.Size = new System.Drawing.Size(743, 289);
             this.DgvProveedores.TabIndex = 0;
             this.DgvProveedores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvProveedores_CellClick);
@@ -65,36 +69,43 @@
             // 
             this.Nombre.HeaderText = "N°";
             this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
             // 
             // Entidad
             // 
             this.Entidad.HeaderText = "Entidad";
             this.Entidad.Name = "Entidad";
+            this.Entidad.ReadOnly = true;
             // 
             // Apertura
             // 
             this.Apertura.HeaderText = "Apertura";
             this.Apertura.Name = "Apertura";
+            this.Apertura.ReadOnly = true;
             // 
             // Expediente
             // 
             this.Expediente.HeaderText = "N° Expediente";
             this.Expediente.Name = "Expediente";
+            this.Expediente.ReadOnly = true;
             // 
             // Juzgado
             // 
             this.Juzgado.HeaderText = "Juzgado";
             this.Juzgado.Name = "Juzgado";
+            this.Juzgado.ReadOnly = true;
             // 
             // Juridisccion
             // 
             this.Juridisccion.HeaderText = "Jurisd";
             this.Juridisccion.Name = "Juridisccion";
+            this.Juridisccion.ReadOnly = true;
             // 
             // Liquidador
             // 
             this.Liquidador.HeaderText = "Liquidador";
             this.Liquidador.Name = "Liquidador";
+            this.Liquidador.ReadOnly = true;
             // 
             // BtnVerGrilla
             // 
