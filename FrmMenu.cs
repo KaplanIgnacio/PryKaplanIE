@@ -15,6 +15,7 @@ namespace PryKaplanTrabajo
         public FrmMenu()
         {
             InitializeComponent();
+           
         }
 
         private void btnSalir1_Click(object sender, EventArgs e)
@@ -27,6 +28,11 @@ namespace PryKaplanTrabajo
             this.Hide();
             FrmMostrar v4 = new FrmMostrar();
             v4.Show();
+        }
+
+        private void menúProveedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

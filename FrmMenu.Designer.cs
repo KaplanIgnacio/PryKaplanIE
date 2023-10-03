@@ -49,6 +49,7 @@
             // 
             // btnSalir1
             // 
+            this.btnSalir1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.btnSalir1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir1.Location = new System.Drawing.Point(460, 158);
             this.btnSalir1.Name = "btnSalir1";
@@ -64,7 +65,7 @@
             this.lblIntro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIntro.Location = new System.Drawing.Point(151, 114);
             this.lblIntro.Name = "lblIntro";
-            this.lblIntro.Size = new System.Drawing.Size(267, 16);
+            this.lblIntro.Size = new System.Drawing.Size(268, 16);
             this.lblIntro.TabIndex = 2;
             this.lblIntro.Text = "Presiona el menú emergente para continuar";
             // 
@@ -85,6 +86,7 @@
             this.menúProveedoresToolStripMenuItem.Name = "menúProveedoresToolStripMenuItem";
             this.menúProveedoresToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
             this.menúProveedoresToolStripMenuItem.Text = "Menú Principal";
+            this.menúProveedoresToolStripMenuItem.Click += new System.EventHandler(this.menúProveedoresToolStripMenuItem_Click);
             // 
             // mostrarToolStripMenuItem
             // 
