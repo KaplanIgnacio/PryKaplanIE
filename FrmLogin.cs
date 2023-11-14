@@ -16,35 +16,28 @@ namespace PryKaplanTrabajo
         {
             InitializeComponent();
         }
+
+        //LLamo a la clase
+        ClaseBaseDeDatos objAcceso = new ClaseBaseDeDatos();
+
         //Contador de intentos fallidos
         Int32 Cont = 0;
 
         private void BtnIngresar_Click(object sender, EventArgs e)
         {
-            //Definimos las variables para validar
-            string VarUsuario = "igna";
-            string VarClave = "12";
-            string ValidarUsuario;
-            string ValidarClave;
-
-            //Lo que ingrese por texto será el valor de mi variable
-            ValidarUsuario = TxtUsuario.Text;
-            ValidarClave = TxtClave.Text;
-
-            //Comparo las variables, si son iguales paso de Form sino tira error
-            if (ValidarUsuario == VarUsuario && ValidarClave == VarClave)
+            if (objAcceso.ValidarUsuarios(TxtUsuario.Text, TxtClave.Text) == true)
             {
                 this.Hide();
-                FrmMenu v3 = new FrmMenu();
-                v3.Show();
-
+                FrmMenu fm = new FrmMenu();
+                fm.Show();
+                Cont = 0;
             }
             else
             {
-                MessageBox.Show("Usuario o clave inválida");
-                TxtUsuario.Clear();
-                TxtClave.Clear();
-                Cont = Cont + 1;
+                MessageBox.Show("Usuario o contraseña incorrectos");
+                TxtUsuario.Text = "";
+                TxtClave.Text = "";
+                Cont++;
             }
 
             //Contador que cierra el programa a los 3 errores
@@ -56,5 +49,25 @@ namespace PryKaplanTrabajo
             }
             
         }
+
+        //Es el botón registrar que lleva al otro Form
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmRegistrarUsuario fr = new FrmRegistrarUsuario();
+            fr.ShowDialog();
+        }
+
+        private void FrmLogin_Load(object sender, EventArgs e)
+        {
+            objAcceso.ConectarBaseDatos();
+            TxtClave.PasswordChar = '*';
+        }
+
+        private void TxtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

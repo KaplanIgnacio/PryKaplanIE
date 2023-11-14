@@ -14,7 +14,7 @@
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClaseBaseDeDatos.cs" />
+    <Compile Include="ClaseBaseDeDatosClientes.cs" />
     <Compile Include="ClaseGrillaProveedores.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -58,6 +60,12 @@
     </Compile>
     <Compile Include="FrmABM.Designer.cs">
       <DependentUpon>FrmABM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmClientes.Designer.cs">
+      <DependentUpon>FrmClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmGrilla.cs">
       <SubType>Form</SubType>
@@ -83,6 +91,12 @@
     <Compile Include="FrmMostrar.Designer.cs">
       <DependentUpon>FrmMostrar.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRegistrarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistrarUsuario.Designer.cs">
+      <DependentUpon>FrmRegistrarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -90,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmABM.resx">
       <DependentUpon>FrmABM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmClientes.resx">
+      <DependentUpon>FrmClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmGrilla.resx">
       <DependentUpon>FrmGrilla.cs</DependentUpon>
@@ -102,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMostrar.resx">
       <DependentUpon>FrmMostrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistrarUsuario.resx">
+      <DependentUpon>FrmRegistrarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -34,6 +34,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menúProveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mostrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,7 +66,7 @@
             this.lblIntro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIntro.Location = new System.Drawing.Point(151, 114);
             this.lblIntro.Name = "lblIntro";
-            this.lblIntro.Size = new System.Drawing.Size(268, 16);
+            this.lblIntro.Size = new System.Drawing.Size(267, 16);
             this.lblIntro.TabIndex = 2;
             this.lblIntro.Text = "Presiona el menú emergente para continuar";
             // 
@@ -82,7 +83,8 @@
             // menúProveedoresToolStripMenuItem
             // 
             this.menúProveedoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mostrarToolStripMenuItem});
+            this.mostrarToolStripMenuItem,
+            this.toolStripMenuItem1});
             this.menúProveedoresToolStripMenuItem.Name = "menúProveedoresToolStripMenuItem";
             this.menúProveedoresToolStripMenuItem.Size = new System.Drawing.Size(99, 20);
             this.menúProveedoresToolStripMenuItem.Text = "Menú Principal";
@@ -94,6 +96,13 @@
             this.mostrarToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.mostrarToolStripMenuItem.Text = "Mostrar Proveedores";
             this.mostrarToolStripMenuItem.Click += new System.EventHandler(this.mostrarToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(183, 22);
+            this.toolStripMenuItem1.Text = "Mostrar Clientes";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // FrmMenu
             // 
@@ -126,5 +135,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menúProveedoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mostrarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }

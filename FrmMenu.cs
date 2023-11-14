@@ -34,5 +34,12 @@ namespace PryKaplanTrabajo
         {
 
         }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmClientes v6 = new FrmClientes();
+            v6.Show();
+        }
     }
 }
