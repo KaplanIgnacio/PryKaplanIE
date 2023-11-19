@@ -37,7 +37,7 @@
             this.Juridisccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Liquidador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BtnVerGrilla = new System.Windows.Forms.Button();
-            this.BtnSalir3 = new System.Windows.Forms.Button();
+            this.BtnVolverMenu = new System.Windows.Forms.Button();
             this.BtnCargar = new System.Windows.Forms.Button();
             this.BtnBorrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProveedores)).BeginInit();
@@ -118,23 +118,23 @@
             this.BtnVerGrilla.UseVisualStyleBackColor = true;
             this.BtnVerGrilla.Click += new System.EventHandler(this.BtnVerGrilla_Click);
             // 
-            // BtnSalir3
+            // BtnVolverMenu
             // 
-            this.BtnSalir3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSalir3.Location = new System.Drawing.Point(718, 357);
-            this.BtnSalir3.Name = "BtnSalir3";
-            this.BtnSalir3.Size = new System.Drawing.Size(69, 54);
-            this.BtnSalir3.TabIndex = 2;
-            this.BtnSalir3.Text = "Salir";
-            this.BtnSalir3.UseVisualStyleBackColor = true;
-            this.BtnSalir3.Click += new System.EventHandler(this.BtnSalir3_Click);
+            this.BtnVolverMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnVolverMenu.Location = new System.Drawing.Point(610, 356);
+            this.BtnVolverMenu.Name = "BtnVolverMenu";
+            this.BtnVolverMenu.Size = new System.Drawing.Size(113, 59);
+            this.BtnVolverMenu.TabIndex = 2;
+            this.BtnVolverMenu.Text = "Volver al Menú";
+            this.BtnVolverMenu.UseVisualStyleBackColor = true;
+            this.BtnVolverMenu.Click += new System.EventHandler(this.BtnSalir3_Click);
             // 
             // BtnCargar
             // 
             this.BtnCargar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCargar.Location = new System.Drawing.Point(263, 357);
+            this.BtnCargar.Location = new System.Drawing.Point(257, 354);
             this.BtnCargar.Name = "BtnCargar";
-            this.BtnCargar.Size = new System.Drawing.Size(90, 54);
+            this.BtnCargar.Size = new System.Drawing.Size(109, 61);
             this.BtnCargar.TabIndex = 3;
             this.BtnCargar.Text = "Cargar";
             this.BtnCargar.UseVisualStyleBackColor = true;
@@ -143,9 +143,9 @@
             // BtnBorrar
             // 
             this.BtnBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnBorrar.Location = new System.Drawing.Point(430, 357);
+            this.BtnBorrar.Location = new System.Drawing.Point(426, 354);
             this.BtnBorrar.Name = "BtnBorrar";
-            this.BtnBorrar.Size = new System.Drawing.Size(89, 56);
+            this.BtnBorrar.Size = new System.Drawing.Size(109, 61);
             this.BtnBorrar.TabIndex = 4;
             this.BtnBorrar.Text = "Borrar";
             this.BtnBorrar.UseVisualStyleBackColor = true;
@@ -158,7 +158,7 @@
             this.ClientSize = new System.Drawing.Size(810, 450);
             this.Controls.Add(this.BtnBorrar);
             this.Controls.Add(this.BtnCargar);
-            this.Controls.Add(this.BtnSalir3);
+            this.Controls.Add(this.BtnVolverMenu);
             this.Controls.Add(this.BtnVerGrilla);
             this.Controls.Add(this.DgvProveedores);
             this.Name = "FrmGrilla";
@@ -179,7 +179,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Juridisccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Liquidador;
         private System.Windows.Forms.Button BtnVerGrilla;
-        private System.Windows.Forms.Button BtnSalir3;
+        private System.Windows.Forms.Button BtnVolverMenu;
         private System.Windows.Forms.Button BtnCargar;
         private System.Windows.Forms.Button BtnBorrar;
     }

@@ -78,7 +78,7 @@ namespace PryKaplanTrabajo
 
             comandoBD.Connection = conexionBD;
             comandoBD.CommandType = System.Data.CommandType.TableDirect;
-            //Que tipo de operacion quier hacer y que me traiga toda la tabla con el tabledirect
+            //Que tipo de operacion quiero hacer y que me traiga toda la tabla con el tabledirect
             comandoBD.CommandText = "CLIENTES";
             //Que tabla traigo
 
@@ -93,7 +93,7 @@ namespace PryKaplanTrabajo
                     if (int.Parse(lectorBD[0].ToString()) == codigo)
                     {
 
-                        //datosTabla += "-" + lectorBD[0]; //dato d la comlumna 0
+                        //datosTabla += "-" + lectorBD[0]; //dato d la columna 0
                         MessageBox.Show("Cliente Existente " + lectorBD[0], "Consulta", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Find = true; // bandera
                         break;

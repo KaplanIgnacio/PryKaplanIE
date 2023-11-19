@@ -75,9 +75,12 @@ namespace PryKaplanTrabajo
             txtCambiarEstadoCliente.Text = dgvDatosClientes[7, poc].Value.ToString();
         }
 
+        //Volver al Menú de Opciones
         private void btnSalir3_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Hide();
+            FrmMenu v11 = new FrmMenu();
+            v11.Show();
         }
     }
 }

@@ -48,7 +48,9 @@ namespace PryKaplanTrabajo
 
         private void BtnSalir3_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Hide();
+            FrmMenu v10 = new FrmMenu();
+            v10.Show();
         }
 
         private void BtnBorrar_Click(object sender, EventArgs e)

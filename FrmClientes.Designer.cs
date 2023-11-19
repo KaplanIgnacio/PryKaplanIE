@@ -37,7 +37,7 @@
             this.btnBusquedaCliente = new System.Windows.Forms.Button();
             this.lblBusquedaCliente = new System.Windows.Forms.Label();
             this.txtBusquedaCliente = new System.Windows.Forms.TextBox();
-            this.btnSalir3 = new System.Windows.Forms.Button();
+            this.btnVolverMenu2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatosClientes)).BeginInit();
             this.BarraInferior.SuspendLayout();
             this.SuspendLayout();
@@ -124,23 +124,23 @@
             this.txtBusquedaCliente.Size = new System.Drawing.Size(124, 20);
             this.txtBusquedaCliente.TabIndex = 7;
             // 
-            // btnSalir3
+            // btnVolverMenu2
             // 
-            this.btnSalir3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir3.Location = new System.Drawing.Point(670, 359);
-            this.btnSalir3.Name = "btnSalir3";
-            this.btnSalir3.Size = new System.Drawing.Size(81, 52);
-            this.btnSalir3.TabIndex = 8;
-            this.btnSalir3.Text = "Salir";
-            this.btnSalir3.UseVisualStyleBackColor = true;
-            this.btnSalir3.Click += new System.EventHandler(this.btnSalir3_Click);
+            this.btnVolverMenu2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolverMenu2.Location = new System.Drawing.Point(670, 359);
+            this.btnVolverMenu2.Name = "btnVolverMenu2";
+            this.btnVolverMenu2.Size = new System.Drawing.Size(81, 52);
+            this.btnVolverMenu2.TabIndex = 8;
+            this.btnVolverMenu2.Text = "Volver al Menú";
+            this.btnVolverMenu2.UseVisualStyleBackColor = true;
+            this.btnVolverMenu2.Click += new System.EventHandler(this.btnSalir3_Click);
             // 
             // FrmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnSalir3);
+            this.Controls.Add(this.btnVolverMenu2);
             this.Controls.Add(this.txtBusquedaCliente);
             this.Controls.Add(this.lblBusquedaCliente);
             this.Controls.Add(this.btnBusquedaCliente);
@@ -171,6 +171,6 @@
         private System.Windows.Forms.Button btnBusquedaCliente;
         private System.Windows.Forms.Label lblBusquedaCliente;
         private System.Windows.Forms.TextBox txtBusquedaCliente;
-        private System.Windows.Forms.Button btnSalir3;
+        private System.Windows.Forms.Button btnVolverMenu2;
     }
 }
