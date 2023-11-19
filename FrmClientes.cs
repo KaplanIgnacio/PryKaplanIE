@@ -67,7 +67,7 @@ namespace PryKaplanTrabajo
 
         }
 
-        //Cuando toco la celda de la grilla, la misma me aparce en el txt para editar
+        //Cuando toco la celda de la grilla, la misma me aparece en el txt para editar
         private void dgvDatosClientes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             poc = dgvDatosClientes.CurrentRow.Index;
