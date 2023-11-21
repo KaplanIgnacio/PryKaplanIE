@@ -8,6 +8,7 @@ using System.Data.OleDb;
 using System.Windows.Forms;
 using System.Data;
 using System.Reflection.Emit;
+using System.ComponentModel.Design;
 
 namespace PryKaplanTrabajo
 {
@@ -42,10 +43,10 @@ namespace PryKaplanTrabajo
 
         public void TraerDatos(DataGridView grilla)
         {
-            //instancia un objeto en la memoria
+            //Instancia un objeto en la memoria
             comandoBD = new OleDbCommand();
 
-            //conecta el comando con la conexion
+            //Conecta el comando con la conexion
             comandoBD.Connection = conexionBD;
             comandoBD.CommandType = System.Data.CommandType.TableDirect;
             comandoBD.CommandText = "CLIENTES";
@@ -78,24 +79,21 @@ namespace PryKaplanTrabajo
 
             comandoBD.Connection = conexionBD;
             comandoBD.CommandType = System.Data.CommandType.TableDirect;
-            //Que tipo de operacion quiero hacer y que me traiga toda la tabla con el tabledirect
-            comandoBD.CommandText = "CLIENTES";
-            //Que tabla traigo
+            comandoBD.CommandText = "CLIENTES";  //Que tabla traigo
 
-            lectorBD = comandoBD.ExecuteReader();
             //Abre la tabla y muestra por renglón
+            lectorBD = comandoBD.ExecuteReader();
 
-            if (lectorBD.HasRows) //SI TIENE FILAS
+            if (lectorBD.HasRows) 
             {
-                bool Find = false; // bandera
-                while (lectorBD.Read()) //mientras pueda leer, mostrar (leer)
+                bool Find = false; // Bandera
+                while (lectorBD.Read())
                 {
                     if (int.Parse(lectorBD[0].ToString()) == codigo)
                     {
 
-                        //datosTabla += "-" + lectorBD[0]; //dato d la columna 0
                         MessageBox.Show("Cliente Existente " + lectorBD[0], "Consulta", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Find = true; // bandera
+                        Find = true; // Bandera
                         break;
                     }
 
@@ -146,5 +144,78 @@ namespace PryKaplanTrabajo
             adaptadorBD.Update(objDataSet, "CLIENTES");
         }
 
+        public void BuscarPorApellido(string ApellidoCliente)
+        {
+            comandoBD = new OleDbCommand();
+
+            comandoBD.Connection = conexionBD;
+            comandoBD.CommandType = System.Data.CommandType.TableDirect;
+            comandoBD.CommandText = "CLIENTES";//Que tabla traigo
+
+            lectorBD = comandoBD.ExecuteReader();
+
+            if (lectorBD.HasRows) //Si tiene filas
+            {
+                bool Existe = false;
+                while (lectorBD.Read())
+                {
+                    if (lectorBD[2].ToString() == ApellidoCliente)
+                    {
+                        MessageBox.Show("El cliente se encuentra registrado", "consulta",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+                        Existe = true;
+                        break;
+                    }
+
+                }
+
+
+                if (Existe == false)
+                {
+                    MessageBox.Show("El cliente no existe",
+                        "Consulta",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
+            }
+
+        }
+
+        public void BuscarPorCodigo(int IDCliente)
+        {
+            comandoBD = new OleDbCommand();
+
+            comandoBD.Connection = conexionBD;
+            comandoBD.CommandType = System.Data.CommandType.TableDirect;
+            comandoBD.CommandText = "CLIENTES";//Que tabla traigo
+
+            lectorBD = comandoBD.ExecuteReader();
+
+            if (lectorBD.HasRows) //Si tiene filas
+            {
+                bool Existe = false;
+                while (lectorBD.Read())
+                {
+                    if (int.Parse(lectorBD[0].ToString()) == IDCliente)
+                    {
+                        MessageBox.Show("El cliente se encuentra registrado", "consulta",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+                        Existe = true;
+                        break;
+                    }
+
+                }
+
+                if (Existe == false)
+                {
+                    MessageBox.Show("El cliente no existe",
+                        "Consulta",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
+            }
+        }
     }
 }

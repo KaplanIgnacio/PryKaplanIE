@@ -43,23 +43,13 @@ namespace PryKaplanTrabajo
         private void btnCambiarEstadoCliente_Click(object sender, EventArgs e)
         {
             dgvDatosClientes[7, poc].Value = txtCambiarEstadoCliente.Text;
+            txtCambiarEstadoCliente.Clear();
         }
 
         private void btnBusquedaCliente_Click(object sender, EventArgs e)
         {
-            a = Convert.ToInt32(txtBusquedaCliente.Text);
-            
-            if (a <=10)
-            {
-                MessageBox.Show("Cliente Existente");
-                txtBusquedaCliente.Text = "";
-            }
-            else
-            {
-                MessageBox.Show("Cliente no Encontrado");
-                txtBusquedaCliente.Text = "";
-            }
-
+            objBaseDatos.BuscarPorApellido(txtBusquedaCliente.Text);
+            txtBusquedaCliente.Clear();
         }
 
         private void dgvDatosClientes_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -81,6 +71,12 @@ namespace PryKaplanTrabajo
             this.Hide();
             FrmMenu v11 = new FrmMenu();
             v11.Show();
+        }
+
+        private void btnBuscarID_Click(object sender, EventArgs e)
+        {
+            objBaseDatos.BuscarPorCodigo(int.Parse(txtBuscarID.Text));
+            txtBuscarID.Clear();
         }
     }
 }

@@ -38,6 +38,10 @@
             this.lblBusquedaCliente = new System.Windows.Forms.Label();
             this.txtBusquedaCliente = new System.Windows.Forms.TextBox();
             this.btnVolverMenu2 = new System.Windows.Forms.Button();
+            this.txtBuscarID = new System.Windows.Forms.TextBox();
+            this.lblBuscarID = new System.Windows.Forms.Label();
+            this.btnBuscarID = new System.Windows.Forms.Button();
+            this.lblInstruccion = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatosClientes)).BeginInit();
             this.BarraInferior.SuspendLayout();
             this.SuspendLayout();
@@ -45,7 +49,7 @@
             // dgvDatosClientes
             // 
             this.dgvDatosClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDatosClientes.Location = new System.Drawing.Point(29, 16);
+            this.dgvDatosClientes.Location = new System.Drawing.Point(83, 12);
             this.dgvDatosClientes.Name = "dgvDatosClientes";
             this.dgvDatosClientes.Size = new System.Drawing.Size(741, 274);
             this.dgvDatosClientes.TabIndex = 0;
@@ -56,9 +60,9 @@
             // 
             this.BarraInferior.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblEstadoConexion});
-            this.BarraInferior.Location = new System.Drawing.Point(0, 428);
+            this.BarraInferior.Location = new System.Drawing.Point(0, 468);
             this.BarraInferior.Name = "BarraInferior";
-            this.BarraInferior.Size = new System.Drawing.Size(800, 22);
+            this.BarraInferior.Size = new System.Drawing.Size(909, 22);
             this.BarraInferior.TabIndex = 1;
             this.BarraInferior.Text = "statusStrip1";
             // 
@@ -71,7 +75,7 @@
             // btnCambiarEstadoCliente
             // 
             this.btnCambiarEstadoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCambiarEstadoCliente.Location = new System.Drawing.Point(438, 359);
+            this.btnCambiarEstadoCliente.Location = new System.Drawing.Point(722, 359);
             this.btnCambiarEstadoCliente.Name = "btnCambiarEstadoCliente";
             this.btnCambiarEstadoCliente.Size = new System.Drawing.Size(172, 53);
             this.btnCambiarEstadoCliente.TabIndex = 2;
@@ -83,15 +87,15 @@
             // 
             this.lblCambiarEstadoCliente.AutoSize = true;
             this.lblCambiarEstadoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCambiarEstadoCliente.Location = new System.Drawing.Point(380, 333);
+            this.lblCambiarEstadoCliente.Location = new System.Drawing.Point(650, 335);
             this.lblCambiarEstadoCliente.Name = "lblCambiarEstadoCliente";
-            this.lblCambiarEstadoCliente.Size = new System.Drawing.Size(88, 20);
+            this.lblCambiarEstadoCliente.Size = new System.Drawing.Size(127, 20);
             this.lblCambiarEstadoCliente.TabIndex = 3;
-            this.lblCambiarEstadoCliente.Text = "Ingrese ID:";
+            this.lblCambiarEstadoCliente.Text = "Cambiar Estado:";
             // 
             // txtCambiarEstadoCliente
             // 
-            this.txtCambiarEstadoCliente.Location = new System.Drawing.Point(486, 333);
+            this.txtCambiarEstadoCliente.Location = new System.Drawing.Point(773, 335);
             this.txtCambiarEstadoCliente.Name = "txtCambiarEstadoCliente";
             this.txtCambiarEstadoCliente.Size = new System.Drawing.Size(124, 20);
             this.txtCambiarEstadoCliente.TabIndex = 4;
@@ -113,13 +117,13 @@
             this.lblBusquedaCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBusquedaCliente.Location = new System.Drawing.Point(12, 331);
             this.lblBusquedaCliente.Name = "lblBusquedaCliente";
-            this.lblBusquedaCliente.Size = new System.Drawing.Size(165, 20);
+            this.lblBusquedaCliente.Size = new System.Drawing.Size(204, 20);
             this.lblBusquedaCliente.TabIndex = 6;
-            this.lblBusquedaCliente.Text = "Buscar cliente por ID: ";
+            this.lblBusquedaCliente.Text = "Buscar cliente por Apellido: ";
             // 
             // txtBusquedaCliente
             // 
-            this.txtBusquedaCliente.Location = new System.Drawing.Point(183, 331);
+            this.txtBusquedaCliente.Location = new System.Drawing.Point(210, 333);
             this.txtBusquedaCliente.Name = "txtBusquedaCliente";
             this.txtBusquedaCliente.Size = new System.Drawing.Size(124, 20);
             this.txtBusquedaCliente.TabIndex = 7;
@@ -127,19 +131,60 @@
             // btnVolverMenu2
             // 
             this.btnVolverMenu2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolverMenu2.Location = new System.Drawing.Point(670, 359);
+            this.btnVolverMenu2.Location = new System.Drawing.Point(766, 429);
             this.btnVolverMenu2.Name = "btnVolverMenu2";
-            this.btnVolverMenu2.Size = new System.Drawing.Size(81, 52);
+            this.btnVolverMenu2.Size = new System.Drawing.Size(128, 36);
             this.btnVolverMenu2.TabIndex = 8;
             this.btnVolverMenu2.Text = "Volver al Menú";
             this.btnVolverMenu2.UseVisualStyleBackColor = true;
             this.btnVolverMenu2.Click += new System.EventHandler(this.btnSalir3_Click);
             // 
+            // txtBuscarID
+            // 
+            this.txtBuscarID.Location = new System.Drawing.Point(520, 337);
+            this.txtBuscarID.Name = "txtBuscarID";
+            this.txtBuscarID.Size = new System.Drawing.Size(124, 20);
+            this.txtBuscarID.TabIndex = 11;
+            // 
+            // lblBuscarID
+            // 
+            this.lblBuscarID.AutoSize = true;
+            this.lblBuscarID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuscarID.Location = new System.Drawing.Point(363, 335);
+            this.lblBuscarID.Name = "lblBuscarID";
+            this.lblBuscarID.Size = new System.Drawing.Size(165, 20);
+            this.lblBuscarID.TabIndex = 10;
+            this.lblBuscarID.Text = "Buscar cliente por ID: ";
+            // 
+            // btnBuscarID
+            // 
+            this.btnBuscarID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarID.Location = new System.Drawing.Point(438, 361);
+            this.btnBuscarID.Name = "btnBuscarID";
+            this.btnBuscarID.Size = new System.Drawing.Size(171, 53);
+            this.btnBuscarID.TabIndex = 9;
+            this.btnBuscarID.Text = "Buscar";
+            this.btnBuscarID.UseVisualStyleBackColor = true;
+            this.btnBuscarID.Click += new System.EventHandler(this.btnBuscarID_Click);
+            // 
+            // lblInstruccion
+            // 
+            this.lblInstruccion.AutoSize = true;
+            this.lblInstruccion.Location = new System.Drawing.Point(677, 319);
+            this.lblInstruccion.Name = "lblInstruccion";
+            this.lblInstruccion.Size = new System.Drawing.Size(208, 13);
+            this.lblInstruccion.TabIndex = 12;
+            this.lblInstruccion.Text = "(Presionar el registro del Estado en la grilla)";
+            // 
             // FrmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(909, 490);
+            this.Controls.Add(this.lblInstruccion);
+            this.Controls.Add(this.txtBuscarID);
+            this.Controls.Add(this.lblBuscarID);
+            this.Controls.Add(this.btnBuscarID);
             this.Controls.Add(this.btnVolverMenu2);
             this.Controls.Add(this.txtBusquedaCliente);
             this.Controls.Add(this.lblBusquedaCliente);
@@ -172,5 +217,9 @@
         private System.Windows.Forms.Label lblBusquedaCliente;
         private System.Windows.Forms.TextBox txtBusquedaCliente;
         private System.Windows.Forms.Button btnVolverMenu2;
+        private System.Windows.Forms.TextBox txtBuscarID;
+        private System.Windows.Forms.Label lblBuscarID;
+        private System.Windows.Forms.Button btnBuscarID;
+        private System.Windows.Forms.Label lblInstruccion;
     }
 }
